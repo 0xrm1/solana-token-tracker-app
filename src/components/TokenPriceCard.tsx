@@ -84,7 +84,7 @@ export function TokenPriceCard({ tokenPrice, isLoading = false }: TokenPriceCard
                 <p className="text-xs text-gray-500">{tokenPrice.name}</p>
               </div>
             </div>
-            <span className="text-sm text-gray-500">vs {tokenPrice.vsTokenSymbol}</span>
+            <span className="text-sm text-gray-500">vs USDC</span>
           </div>
           
           <div className="text-2xl font-bold mb-2">
