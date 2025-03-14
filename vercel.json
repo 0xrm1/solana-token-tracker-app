@@ -21,7 +21,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "http://quicky-trade-env.eba-my3ep4mp.us-east-1.elasticbeanstalk.com"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -29,7 +29,7 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
+          "value": "*"
         },
         {
           "key": "Access-Control-Max-Age",

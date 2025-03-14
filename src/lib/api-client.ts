@@ -21,7 +21,7 @@ class ApiClient {
 
   private constructor() {
     // Get the API URL from environment variables or use a default
-    this.baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+    this.baseURL = '/api';
     
     // Create Axios instance
     this.api = axios.create({
@@ -30,8 +30,7 @@ class ApiClient {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
-      timeout: 30000, // 30 seconds
-      withCredentials: true
+      timeout: 60000, // 60 seconds
     });
 
     // Add request interceptor for authentication
