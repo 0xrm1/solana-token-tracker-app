@@ -21,7 +21,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "value": "https://quicky-trade-env.eba-my3ep4mp.us-east-1.elasticbeanstalk.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
