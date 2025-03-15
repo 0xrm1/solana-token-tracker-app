@@ -8,7 +8,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://quicky-trade-env.eba-my3ep4mp.us-east-1.elasticbeanstalk.com/api/:path*"
+      "destination": "https://api.quicky.trading/api/:path*"
+    },
+    {
+      "source": "/ws/:path*",
+      "destination": "wss://api.quicky.trading/ws/:path*"
     }
   ],
   "headers": [
@@ -16,24 +20,24 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Access-Control-Allow-Credentials",
-          "value": "true"
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
         },
         {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
         },
         {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET,DELETE,PATCH,POST,PUT,OPTIONS"
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
         },
         {
-          "key": "Access-Control-Allow-Headers",
-          "value": "*"
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         },
         {
-          "key": "Access-Control-Max-Age",
-          "value": "86400"
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://api.quicky.trading wss://api.quicky.trading;"
         }
       ]
     }
