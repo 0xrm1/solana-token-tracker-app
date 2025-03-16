@@ -12,7 +12,7 @@ const nextConfig = {
       },
       {
         source: '/ws/:path*',
-        destination: '/wss://api.quicky.trading/ws/:path*',
+        destination: 'https://api.quicky.trading/ws/:path*',
       },
     ];
   },
